@@ -1,0 +1,34 @@
+nav ul{
+    list-style: none;
+   
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li{
+    background-color: black;
+    color:white;
+    padding: 10px;
+}
+
+canvas{
+    border-color: black;
+    border-width: 0.5rem;
+}
+
+.botao{
+    background-color: black;
+    color: white;
+    cursor: crosshair;
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.botoes{
+    padding: 1px;
+    justify-content: center;
+    text-align: center;
+}
