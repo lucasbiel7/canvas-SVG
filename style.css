@@ -7,10 +7,19 @@ nav ul li{
     display: inline-block;
 }
 
+a{
+    color:red;
+    text-decoration: none;   
+}
+
 nav ul li{
     background-color: black;
     color:white;
     padding: 10px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
 }
 
 canvas{
@@ -31,4 +40,37 @@ canvas{
     padding: 1px;
     justify-content: center;
     text-align: center;
+}
+
+
+.qualidades{
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    width: 40%;
+    height: 16rem;
+    float: left;
+    margin: 1px;
+    margin-left: 5px;
+}
+
+div.qualidades::nth-child(even){
+    float: right;
+}
+
+div.qualidades label{
+    color: white;
+    background-color: brown;
+    padding: 1px;
+    display:block;
+    margin: 1px;
+}
+
+div.qualidades label:first-child{
+    background-color: blue
+}
+
+div.qualidades label::nth-child(even){
+    color: black;
+    background-color: aquamarine;
 }

@@ -1,27 +1,64 @@
 <html>
-	<header>
-		<meta charset="utf-8">
-		<script src="script.js"></script>
-		<link rel="stylesheet" type="text/css" href="style.css">  
-		<title>Lista de exercicios 1</title>
-	</header>
-	<body>
-		<nav>
-			<ul>
-				<li>Menu 1 </li>
-				<li>Menu 2 </li>
-				<li>Menu 3 </li>
-				<li>Menu 4 </li>
-			</ul>
-		</nav>
-		<section>
-			<h1>Exemplo de utilização do canvas</h1>
-			<canvas width="400" height="400" id="canvas">
-			</canvas>
-			<div class="botoes">
-				<button class="botao" onclick="desenharRetangulos()">Retangulos com retangulos internos</button>
-				<button class="botao" onclick="desenharCirculos()">Circulos com circulos internos</button>
-			</div>
-		</section>
-	</body>
+<header>
+	<meta charset="utf-8">
+	<script src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Lista de exercicios 1</title>
+	<script>
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(function (pos) {
+				var localizacao = document.getElementById("localizacao");
+				localizacao.innerHTML = "Sua posição atual é Lat: " + pos.coords.latitude + "<br/> Long: " + pos.coords.longitude;
+			});
+		}
+	</script>
+</header>
+
+<body onload="atualizarNome()">
+	<nav>
+		<ul>
+			<li><a href="video.html">Video </a></li>
+			<li><a href="audio.html">Audio </a></li>
+			<li><a href="youtube.html">Página externa </a></li>
+			<li><a href="dragAndDrop.html">DragDrop</a></li>
+		</ul>
+	</nav>
+	<section>
+		<h1>Exemplo de utilização do canvas</h1>
+		<h5 id="localizacao"></h5>
+		<article>
+			<p>Olá <span id="nome"></span> abaixo segue demonstração de como <br />
+				utilizar alguns elementos do canvas com auxilio do Java script (JS)</p>
+		</article>
+		<canvas width="400" height="400" id="canvas">
+		</canvas>
+		<div class="botoes">
+			<button class="botao" onclick="desenharRetangulos()">Retangulos com retangulos internos</button>
+			<button class="botao" onclick="desenharCirculos()">Circulos com circulos internos</button>
+			<button class="botao" onclick="desenharCirculoGradient()">Circulos com gradiente</button>
+		</div>
+	</section>
+	<section>
+		<h1>Exemplo de utilização de SVG</h1>
+		<article>
+			<p>Abaixo segue demonstração de como <br />
+				utilizar alguns elementos do SVG
+			</p>
+		</article>
+		<svg id="svg" width="200" height="400">
+			<polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:red;stroke:purple;stroke-width:3;fill-rule:evenodd;" />
+			<text fill="blakc" font-weight="bold" font-size="15" font-family="Verdana" x="68" y="120">UNI-BH</text>
+		</svg>
+		<svg width="200" height="400">
+			<rect x="0" y="0" width="50" height="50" style="fill: red; stroke: black;stroke-width: 2px;" />
+			<rect x="75" y="0" width="50" height="50" style="fill: green; stroke: black;stroke-width: 2px;" />
+			<rect x="0" y="75" width="50" height="50" style="fill: blue; stroke: black;stroke-width: 2px;" />
+			<rect x="75" y="75" width="50" height="50" style="fill: yellow; stroke: black;stroke-width: 2px;" />
+		</svg>
+	</section>
+	<footer style="text-align: center">
+		Trabalho da disciplina de desenvolvimento web - 16-09-2018
+	</footer>
+</body>
+
 </html>

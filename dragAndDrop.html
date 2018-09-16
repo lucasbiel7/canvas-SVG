@@ -1,0 +1,35 @@
+<html>
+<header>
+    <meta charset="utf-8">
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Drag and drop</title>
+</header>
+
+<body>
+    <section>
+        <h1>Utilização de evento drag and drop</h1>
+        <article>
+            <p>Exemplo de como utilizar os eventos de drag and drop</p>
+        </article>
+        <div>
+
+            <div class="qualidades" ondrop="dropQualidades(event)" ondragover="permitirDropar(event)">
+                <h5>Arraste para o quadrado suas qualidades</h5><br>
+            </div>
+
+            <div class="qualidades">
+                <h5>Escolha as suas qualidades</h5>
+                <label draggable="true" ondragstart="moverQualidade(event)">Inteligente</label>
+                <label draggable="true" ondragstart="moverQualidade(event)">Gentil</label>
+                <label draggable="true" ondragstart="moverQualidade(event)">Animado</label>
+                <label draggable="true" ondragstart="moverQualidade(event)">Prestativo</label>
+                <label draggable="true" ondragstart="moverQualidade(event)">Dedicado</label>
+                <label draggable="true" ondragstart="moverQualidade(event)">Caridoso</label>
+                <label draggable="true" ondragstart="moverQualidade(event)">Educado</label>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
